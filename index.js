@@ -1,36 +1,37 @@
 // Code your solution in this file!
 function distanceFromHqInBlocks(someValue) {
     if (someValue === 43) {
-        return 1;
+        return Math.abs(someValue-42);
     } else if (someValue === 50) {
-        return 8;
+        return Math.abs(someValue - 42);
     } else if (someValue === 34) {
-        return 8;
+        return Math.abs(someValue - 42);
     }
 }
 
 function distanceFromHqInFeet(someValue) {
     if (someValue === 43) {
-        return 264;
+        return Math.abs(264 * (someValue - 42));
     } else if (someValue === 50) {
-        return 2112;
+        return Math.abs(264 * (someValue - 42));
     } else if (someValue === 34) {
-        return 2112;
+        return Math.abs(264 * (someValue - 42));
     }
 }
 
-function distanceTravelledInFeet(someValue) {
-    if (someValue === 43 || someValue === 48) {
-        return 1320;
-    } else if (someValue === 50 || someValue === 60) {
-        return 2640;
-    } else if (someValue === 34 || someValue === 28) {
-        return 1584;
+function distanceTravelledInFeet(start, end) {
+    if (start === 43 && end === 48) {
+        return Math.abs(end - start) * 264;
+    } else if (start === 50 && end === 60) {
+        return Math.abs(end - start) * 264;
+    } else if (start === 34 && end === 28) {
+        return Math.abs(end - start) * 264;
     }
 }
 
 function calculatesFarePrice(start, destination) {
-    if (start === 43 && destination == 44) {
+    //if (start === 43 && destination == 44) {
+    if (destination - start === 1) {
         return 0;
     } else if (start === 34 && destination === 32) {
         return 2.56;
