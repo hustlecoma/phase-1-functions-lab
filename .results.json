@@ -5,9 +5,9 @@
     "passes": 13,
     "pending": 0,
     "failures": 0,
-    "start": "2022-03-21T05:43:51.028Z",
-    "end": "2022-03-21T05:43:51.237Z",
-    "duration": 209
+    "start": "2022-03-22T05:27:46.086Z",
+    "end": "2022-03-22T05:27:46.310Z",
+    "duration": 224
   },
   "tests": [
     {
@@ -23,7 +23,7 @@
       "title": "returns a distance in blocks",
       "fullTitle": "index.js distanceFromHqInBlocks() returns a distance in blocks",
       "file": "/home/frank/Development/code/Mod1/phase-1-functions-lab/test/indexTest.js",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "speed": "fast",
       "err": {}
@@ -144,7 +144,7 @@
       "title": "returns a distance in blocks",
       "fullTitle": "index.js distanceFromHqInBlocks() returns a distance in blocks",
       "file": "/home/frank/Development/code/Mod1/phase-1-functions-lab/test/indexTest.js",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "speed": "fast",
       "err": {}

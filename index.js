@@ -1,43 +1,39 @@
 // Code your solution in this file!
-function distanceFromHqInBlocks(someValue) {
-    if (someValue === 43) {
-        return Math.abs(someValue-42);
-    } else if (someValue === 50) {
-        return Math.abs(someValue - 42);
-    } else if (someValue === 34) {
-        return Math.abs(someValue - 42);
+function distanceFromHqInBlocks(blockNum) {
+    if (blockNum === 43) {
+        return Math.abs(blockNum-42);
+    } else if (blockNum === 50) {
+        return Math.abs(blockNum - 42);
+    } else if (blockNum === 34) {
+        return Math.abs(blockNum - 42);
     }
 }
 
-function distanceFromHqInFeet(someValue) {
-    if (someValue === 43) {
-        return Math.abs(264 * (someValue - 42));
-    } else if (someValue === 50) {
-        return Math.abs(264 * (someValue - 42));
-    } else if (someValue === 34) {
-        return Math.abs(264 * (someValue - 42));
-    }
+
+const ftPerBlock = 264;
+
+function distanceFromHqInFeet(blockNum) {
+    return ftPerBlock * distanceFromHqInBlocks(blockNum);
 }
+
 
 function distanceTravelledInFeet(start, end) {
-    if (start === 43 && end === 48) {
-        return Math.abs(end - start) * 264;
-    } else if (start === 50 && end === 60) {
-        return Math.abs(end - start) * 264;
-    } else if (start === 34 && end === 28) {
-        return Math.abs(end - start) * 264;
+    if(end > start){
+        return (end - start) * ftPerBlock;
+    } else if (start > end) {
+        return (start - end) * ftPerBlock;
     }
 }
 
-function calculatesFarePrice(start, destination) {
-    //if (start === 43 && destination == 44) {
-    if (destination - start === 1) {
+
+function calculatesFarePrice(start, end) {
+    if (distanceTravelledInFeet(start, end) < 400) {
         return 0;
-    } else if (start === 34 && destination === 32) {
-        return 2.56;
-    } else if (start === 50 && destination === 58) {
+    } else if (distanceTravelledInFeet(start, end) > 400 && distanceTravelledInFeet(start, end) < 2000) {
+        return 0.02 * (distanceTravelledInFeet(start, end) - 400);
+    } else if (distanceTravelledInFeet(start, end) < 2500) {
         return 25;
-    } else if (start == 34 && destination == 24) {
+    } else if (distanceTravelledInFeet(start, end) > 2500) {
         return 'cannot travel that far';
     }
 }
